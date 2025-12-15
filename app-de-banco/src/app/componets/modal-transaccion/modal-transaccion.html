@@ -1,36 +1,20 @@
-<!-- Modal -->
-<div id="modalTransaccion" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md transform transition-transform scale-95">
-    <h3 class="text-2xl font-bold mb-6 text-gray-800 text-center">Realizar Transacción</h3>
-    
-    <form class="flex flex-col gap-4">
-      <!-- Cuenta del usuario (mostrada) -->
-      <div>
-        <label class="block mb-1 font-semibold text-gray-700">Cuenta origen</label>
-        <input type="text" value="1001-001" disabled 
-               class="w-full border border-gray-300 rounded-lg p-3 bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-      </div>
-      
-      <!-- Cuenta destinataria -->
-      <div>
-        <label class="block mb-1 font-semibold text-gray-700">Cuenta destinataria</label>
-        <input type="text" placeholder="Ingrese número de cuenta" 
-               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
-      </div>
-      
-      <!-- Monto -->
-      <div>
-        <label class="block mb-1 font-semibold text-gray-700">Monto</label>
-        <input type="number" placeholder="Ingrese monto" 
-               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
-      </div>
-      
-      <!-- Botones -->
-      <div class="flex justify-end gap-3 mt-4">
-        <button type="button" onclick="cerrarModal()" 
-                class="bg-gray-400 text-white px-5 py-2 rounded-lg hover:bg-gray-500 transition">Cancelar</button>
-        <button type="submit" 
-                class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Enviar</button>
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+    <h3 class="text-xl font-bold mb-4">Realizar Transacción</h3>
+
+    <form (ngSubmit)="onEnviar()">
+      <label class="block mb-2 font-semibold">Cuenta origen</label>
+      <input type="text" [value]="cuentaOrigen" disabled class="w-full mb-4 border rounded p-2 bg-gray-100">
+
+      <label class="block mb-2 font-semibold">Cuenta destinataria</label>
+      <input type="text" [(ngModel)]="cuentaDestino" name="cuentaDestino" placeholder="Ingrese número de cuenta" class="w-full mb-4 border rounded p-2">
+
+      <label class="block mb-2 font-semibold">Monto</label>
+      <input type="number" [(ngModel)]="monto" name="monto" placeholder="Ingrese monto" class="w-full mb-4 border rounded p-2">
+
+      <div class="flex justify-end gap-2">
+        <button type="button" (click)="onCancelar()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancelar</button>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
       </div>
     </form>
   </div>

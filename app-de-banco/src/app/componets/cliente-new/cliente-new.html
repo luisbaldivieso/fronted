@@ -1,1 +1,60 @@
-<h1>ClienteNew</h1>
+<div class="overflow-x-auto">
+
+  <table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-blue-600 text-white">
+      <tr>
+        <th class="px-6 py-3 text-left text-sm font-medium">ID Cliente</th>
+        <th class="px-6 py-3 text-left text-sm font-medium">Número de Cuenta</th>
+        <th class="px-6 py-3 text-left text-sm font-medium">Tipo</th>
+        <th class="px-6 py-3 text-left text-sm font-medium">Saldo</th>
+        <th class="px-6 py-3 text-left text-sm font-medium">Estado</th>
+        <th class="px-6 py-3 text-left text-sm font-medium">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+
+      <!-- Fila 1 -->
+      <tr class="hover:bg-gray-50">
+        <td class="px-6 py-4 text-sm text-gray-700">693ce3312915c08467c0d0db</td>
+        <td class="px-6 py-4 text-sm text-gray-700 font-semibold">1001-001</td>
+        <td class="px-6 py-4 text-sm text-gray-700">Ahorros</td>
+        <td class="px-6 py-4 text-sm text-green-600 font-bold">$1,200.00</td>
+        <td class="px-6 py-4 text-sm text-green-600 font-bold">activo</td>
+        <td class="px-6 py-4 text-sm flex gap-2">
+          <button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition" onclick="alert('Editar cuenta 1001-001')">Editar</button>
+          <button class="bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition" onclick="alert('Eliminar cuenta 1001-001')">Eliminar</button>
+          <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition" onclick="alert('Cambiar estado 1001-001')">Desactivar</button>
+        </td>
+      </tr>
+
+      <!-- Fila 2 -->
+      <tr class="hover:bg-gray-50">
+        <td class="px-6 py-4 text-sm text-gray-700">693ce3e42915c08467c0d0e</td>
+        <td class="px-6 py-4 text-sm text-gray-700 font-semibold">1002-002</td>
+        <td class="px-6 py-4 text-sm text-gray-700">Corriente</td>
+        <td class="px-6 py-4 text-sm text-green-600 font-bold">$500.00</td>
+        <td class="px-6 py-4 text-sm text-red-600 font-bold">inactivo</td>
+        <td class="px-6 py-4 text-sm flex gap-2">
+          <button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition" onclick="alert('Editar cuenta 1002-002')">Editar</button>
+          <button class="bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition" onclick="alert('Eliminar cuenta 1002-002')">Eliminar</button>
+          <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition" onclick="alert('Cambiar estado 1002-002')">Activar</button>
+        </td>
+      </tr>
+
+      <!-- Fila 3 -->
+      <tr class="hover:bg-gray-50">
+        <td class="px-6 py-4 text-sm text-gray-700">693ce3312915c08467c0d0dc</td>
+        <td class="px-6 py-4 text-sm text-gray-700 font-semibold">1003-003</td>
+        <td class="px-6 py-4 text-sm text-gray-700">Ahorros</td>
+        <td class="px-6 py-4 text-sm text-green-600 font-bold">$750.00</td>
+        <td class="px-6 py-4 text-sm text-green-600 font-bold">activo</td>
+        <td class="px-6 py-4 text-sm flex gap-2">
+          <button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 transition" onclick="alert('Editar cuenta 1003-003')">Editar</button>
+          <button class="bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition" onclick="alert('Eliminar cuenta 1003-003')">Eliminar</button>
+          <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition" onclick="alert('Cambiar estado 1003-003')">Desactivar</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

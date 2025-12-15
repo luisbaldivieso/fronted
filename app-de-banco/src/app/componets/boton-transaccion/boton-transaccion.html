@@ -1,26 +1,11 @@
-<button (click)="abrirModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-  Nueva Transacción
-</button>
-
-<!-- Modal dentro del mismo componente -->
-<div *ngIf="modalVisible" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-    <h3 class="text-xl font-bold mb-4">Realizar Transacción</h3>
-    
-    <form (ngSubmit)="realizarTransaccion()" #f="ngForm">
-      <label class="block mb-2 font-semibold">Cuenta origen</label>
-      <input type="text" [value]="cuentaOrigen" disabled class="w-full mb-4 border rounded p-2 bg-gray-100">
-      
-      <label class="block mb-2 font-semibold">Cuenta destinataria</label>
-      <input type="text" name="cuentaDestino" [(ngModel)]="cuentaDestino" placeholder="Ingrese número de cuenta" class="w-full mb-4 border rounded p-2">
-      
-      <label class="block mb-2 font-semibold">Monto</label>
-      <input type="number" name="monto" [(ngModel)]="monto" placeholder="Ingrese monto" class="w-full mb-4 border rounded p-2">
-      
-      <div class="flex justify-end gap-2">
-        <button type="button" (click)="cerrarModal()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancelar</button>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
-      </div>
-    </form>
-  </div>
+<div class="text-center mt-6">
+  <button (click)="abrirModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+    Nueva Transacción
+  </button>
 </div>
+
+<app-modal-transaccion *ngIf="modalVisible"
+  [cuentaOrigen]="cuentaOrigen"
+  (cancelar)="cerrarModal()"
+  (enviar)="handleEnviar($event)">
+</app-modal-transaccion>
