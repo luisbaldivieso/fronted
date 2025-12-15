@@ -1,5 +1,27 @@
-<h1>CuentaUsuario</h1>
-<app-saldo-car></app-saldo-car>
-<app-historial-transacciones></app-historial-transacciones>
-<app-boton-transaccion></app-boton-transaccion>
-<app-modal-transaccion></app-modal-transaccion>
+<div class="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
+
+  <!-- Título de la página -->
+  <h1 class="text-3xl font-bold text-blue-700 mb-6">Cuenta Usuario</h1>
+
+  <!-- Contenedor del saldo y historial -->
+  <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Saldo -->
+    <div>
+      <app-saldo-car></app-saldo-car>
+    </div>
+
+    <!-- Historial -->
+    <div>
+      <app-historial-transacciones></app-historial-transacciones>
+    </div>
+
+  </div>
+
+  <!-- Botón de nueva transacción -->
+  <div class="mt-6 w-full max-w-4xl flex justify-center">
+    <app-boton-transaccion></app-boton-transaccion>
+  </div>
+
+
+</div>

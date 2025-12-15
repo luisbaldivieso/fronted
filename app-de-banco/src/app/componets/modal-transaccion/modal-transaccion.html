@@ -1,1 +1,26 @@
-<h1>ModalTransacción</h1>
+<!-- Modal -->
+<div id="modalTransaccion" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+    <h3 class="text-xl font-bold mb-4">Realizar Transacción</h3>
+    
+    <form>
+      <!-- Cuenta del usuario (mostrada) -->
+      <label class="block mb-2 font-semibold">Cuenta origen</label>
+      <input type="text" value="1001-001" disabled class="w-full mb-4 border rounded p-2 bg-gray-100">
+      
+      <!-- Cuenta destinataria -->
+      <label class="block mb-2 font-semibold">Cuenta destinataria</label>
+      <input type="text" placeholder="Ingrese número de cuenta" class="w-full mb-4 border rounded p-2">
+      
+      <!-- Monto -->
+      <label class="block mb-2 font-semibold">Monto</label>
+      <input type="number" placeholder="Ingrese monto" class="w-full mb-4 border rounded p-2">
+      
+      <!-- Botones -->
+      <div class="flex justify-end gap-2">
+        <button type="button" onclick="cerrarModal()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancelar</button>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
