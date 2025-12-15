@@ -1,31 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Banco Bisa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.2/dist/full.css" rel="stylesheet">
-</head>
-<body class="bg-blue-100 flex items-center justify-center h-screen">
+<div class="w-full max-w-md px-10 py-12 bg-white/80 backdrop-blur rounded-xl shadow-lg">
 
-  <div class="card w-96 bg-white shadow-xl">
-    <div class="card-body">
-      <h2 class="text-center text-2xl font-bold text-blue-700 mb-4">Banco Bisa</h2>
-      <p class="text-center text-sm text-gray-500 mb-6">Cuidando tu futuro</p>
+  <h1 class="text-3xl font-semibold text-gray-800 mb-8">
+    Acceso
+  </h1>
 
-      <!-- Formulario -->
-      <form class="flex flex-col gap-4">
-        <input type="text" placeholder="Usuario" class="input input-bordered w-full" />
-        <input type="password" placeholder="Contraseña" class="input input-bordered w-full" />
-        <button class="btn btn-primary w-full">Ingresar</button>
-      </form>
+  <form class="space-y-6">
 
-      <p class="text-center text-sm mt-4 text-gray-500">
-        ¿No tienes cuenta? <a href="#" class="text-blue-700 font-semibold">Regístrate</a>
-      </p>
+    <div>
+      <label class="label">
+        <span class="label-text text-gray-600">
+          Correo electrónico o usuario
+        </span>
+      </label>
+      <input
+        type="text"
+        placeholder="usuario@bisa.com"
+        class="input input-bordered w-full bg-white"
+      />
     </div>
-  </div>
 
-</body>
-</html>
+    <div>
+      <label class="label">
+        <span class="label-text text-gray-600">Contraseña</span>
+      </label>
+      <input
+        type="password"
+        placeholder="********"
+        class="input input-bordered w-full bg-white"
+      />
+    </div>
+
+    <button
+      class="btn w-full bg-yellow-400 hover:bg-yellow-500 text-black border-none rounded-full">
+      Iniciar sesión
+    </button>
+
+  </form>
+
+</div>

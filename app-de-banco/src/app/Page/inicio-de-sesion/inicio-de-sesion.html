@@ -1,2 +1,34 @@
-<h1>InicioDeSesion</h1>
-<app-login-from></app-login-from>
+<div class="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-white overflow-hidden">
+
+  <!-- IZQUIERDA -->
+  <section class="relative p-10 overflow-hidden">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2 font-semibold text-gray-800 mb-10">
+      <span class="text-xl">👤</span>
+      <span>Banco Bisa</span>
+    </div>
+
+    <!-- Figuras decorativas -->
+    <div class="absolute w-72 h-72 bg-blue-500 rounded-full opacity-20 -top-20 -left-20"></div>
+    <div class="absolute w-96 h-96 bg-yellow-400 rounded-full opacity-30 top-40 -left-40"></div>
+    <div class="absolute w-60 h-60 bg-blue-400 rounded-full opacity-30 bottom-20 right-10"></div>
+
+    <!-- Texto -->
+    <div class="relative z-10 mt-40">
+      <h2 class="text-4xl font-bold text-blue-700">
+        Cuidando tu futuro
+      </h2>
+      <p class="text-gray-600 mt-4 text-lg">
+        Accede de forma segura a tu banca digital
+      </p>
+    </div>
+
+  </section>
+
+  <!-- DERECHA -->
+  <section class="flex items-center justify-center bg-gradient-to-br from-blue-50 to-yellow-50">
+    <app-login-from></app-login-from>
+  </section>
+
+</div>
