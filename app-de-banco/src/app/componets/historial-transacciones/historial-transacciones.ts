@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-historial-transacciones',
-  imports: [],
-  templateUrl: './historial-transacciones.html',
-  styleUrl: './historial-transacciones.css',
+  standalone: true,
+  templateUrl: './historial-transacciones.html'
 })
-export class HistorialTransacciones {
-
-}
+export class HistorialTransacciones {}

@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cliente-new',
-  imports: [],
-  templateUrl: './cliente-new.html',
-  styleUrl: './cliente-new.css',
+  standalone: true,
+  templateUrl: './cliente-new.html'
 })
-export class ClienteNew {
-
-}
+export class ClienteNew {}
