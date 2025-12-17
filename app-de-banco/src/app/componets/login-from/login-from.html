@@ -1,40 +1,28 @@
-<div class="w-full max-w-md px-10 py-12 bg-white/80 backdrop-blur rounded-xl shadow-lg">
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <h2>Iniciar sesión</h2>
 
-  <h1 class="text-3xl font-semibold text-gray-800 mb-8">
-    Acceso
-  </h1>
+  <input
+    type="email"
+    name="correo"
+    [(ngModel)]="correo"
+    placeholder="Correo"
+    required
+  />
 
-  <form class="space-y-6">
+  <br /><br />
 
-    <div>
-      <label class="label">
-        <span class="label-text text-gray-600">
-          Correo electrónico o usuario
-        </span>
-      </label>
-      <input
-        type="text"
-        placeholder="usuario@bisa.com"
-        class="input input-bordered w-full bg-white"
-      />
-    </div>
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    placeholder="Contraseña"
+    required
+  />
 
-    <div>
-      <label class="label">
-        <span class="label-text text-gray-600">Contraseña</span>
-      </label>
-      <input
-        type="password"
-        placeholder="********"
-        class="input input-bordered w-full bg-white"
-      />
-    </div>
+  <br /><br />
 
-    <button
-      class="btn w-full bg-yellow-400 hover:bg-yellow-500 text-black border-none rounded-full">
-      Iniciar sesión
-    </button>
+  <button type="submit" [disabled]="loginForm.invalid">
+    Ingresar
+  </button>
 
-  </form>
-
-</div>
+</form>
